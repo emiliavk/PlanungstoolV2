@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Planungstool-Backend",
-    "\\Planungstool-Backend\\Controllers",
-    "\\Planungstool-Frontend"
+    ""
   ],
-  "SelectedNode": "\\Planungstool-Frontend\\public",
+  "SelectedNode": "\\Planungstool-Backend.sln",
   "PreviewInSolutionExplorer": false
 }
