@@ -32,11 +32,21 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@buhler/ui-fonts",
+                "output": "./assets/fonts"
+              },
+              {
+                "glob": "icons-buhler.svg",
+                "input": "node_modules/@buhler/ui-icons/",
+                "output": "/assets/icons/"
               }
             ],
             "styles": [
               "src/styles.css"
-            ]
+            , "node_modules/@buhler/ui-fonts/font.css"]
           },
           "configurations": {
             "production": {

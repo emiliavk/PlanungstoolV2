@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+/* @tailwind base; is a Reset-File, don't use it in combination with a different reset-files. */
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@buhler/ui-fonts/css/buhler-fonts.css;
+/* global styles */
+/* back frame – THIN and subtle */
+.bui-back-card {
+  background-color: #335B6F;                 
+  border: 1px solid rgba(255,255,255,0.10);  
+  border-radius: 8px;
+
+  padding: 2px;                              
+  margin: 8px;                               
+
+  /* no extra lines */
+  box-shadow: none;
+
+  /* layout safety */
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Make page bg slightly darker so the #335B6F frame stands out */
+body {
+  background-color: #00324B;
+}
+/* you already have this */
+
+
+/* right side placeholder */
+.page-grid {
+  display: grid;
+  grid-template-columns: 253px; 
+  gap: 16px; 
+  padding: 12px; 
+  height: 100%;
+}
+
+/* if any parent has overflow hidden, disable for the sidebar column */
+.sidebar-column, .page-grid, .app-shell-left {
+  overflow: visible;
+}

@@ -3,13 +3,49 @@
   "WorkspaceRootPath": "C:\\Users\\U63730\\dev\\Planungstool-Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\app-header\\app-header.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\app-header\\app-header.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\year-view\\year-view.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\year-view\\year-view.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\app.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\app.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\app-header\\app-header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\year-view\\year-view.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{6220F705-1BF2-24A1-B1CB-95CCB9652BF0}|..\\Planungstool-Frontend\\Planungstool-Frontend.esproj|c:\\users\\u63730\\dev\\planungstool-frontend\\src\\app\\appshell\\appshell.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,32 +55,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\.gitignore",
-              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\.gitignore",
-              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\.gitignore",
-              "RelativeToolTip": "..\\Planungstool-Frontend\\.gitignore",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-20T07:03:33.962Z",
+              "DocumentIndex": 1,
+              "Title": "app-header.html",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app-header\\app-header.html",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\app-header\\app-header.html",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app-header\\app-header.html",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\app-header\\app-header.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-21T08:23:06.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "package.json",
-              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\package.json",
-              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\package.json",
-              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\package.json",
-              "RelativeToolTip": "..\\Planungstool-Frontend\\package.json",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-20T06:58:26.221Z",
+              "DocumentIndex": 0,
+              "Title": "app-header.ts",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app-header\\app-header.ts",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\app-header\\app-header.ts",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app-header\\app-header.ts",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\app-header\\app-header.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-10-21T08:22:53.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "app-header.css",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app-header\\app-header.css",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\app-header\\app-header.css",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app-header\\app-header.css",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\app-header\\app-header.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-21T07:54:40.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.ts",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.ts",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\app.ts",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.ts",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\app.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-10-21T06:37:42.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "main.ts",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\main.ts",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\main.ts",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\main.ts",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\main.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-10-21T06:30:11.095Z",
               "EditorCaption": ""
             },
             {
@@ -73,16 +148,132 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "year-view.html",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\year-view\\year-view.html",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\year-view\\year-view.html",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\year-view\\year-view.html",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\year-view\\year-view.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-21T05:55:33.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "year-view.css",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\year-view\\year-view.css",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\year-view\\year-view.css",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\year-view\\year-view.css",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\year-view\\year-view.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-21T05:53:24.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "year-view.ts",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\year-view\\year-view.ts",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\year-view\\year-view.ts",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\year-view\\year-view.ts",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\year-view\\year-view.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-10-21T05:52:28.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\styles.css",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\styles.css",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\styles.css",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\styles.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-21T05:39:07.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.css",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\app.css",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.css",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\app.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-21T05:35:03.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "app.html",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.html",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\app.html",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.html",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\app.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-21T05:34:50.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appshell.ts",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\appshell\\appshell.ts",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\appshell\\appshell.ts",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\appshell\\appshell.ts",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\appshell\\appshell.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-10-21T04:15:02.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\.gitignore",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\.gitignore",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\.gitignore",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-20T07:03:33.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\package.json",
+              "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\package.json",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\package.json",
+              "RelativeToolTip": "..\\Planungstool-Frontend\\package.json",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-20T06:58:26.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "app.config.ts",
-              "DocumentMoniker": "c:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.config.ts",
+              "DocumentMoniker": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.config.ts",
               "RelativeDocumentMoniker": "..\\Planungstool-Frontend\\src\\app\\app.config.ts",
-              "ToolTip": "c:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.config.ts",
+              "ToolTip": "C:\\Users\\U63730\\dev\\Planungstool-Frontend\\src\\app\\app.config.ts",
               "RelativeToolTip": "..\\Planungstool-Frontend\\src\\app\\app.config.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-10-20T06:52:16.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T06:52:16.437Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

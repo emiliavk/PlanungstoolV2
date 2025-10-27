@@ -1,0 +1,188 @@
+/* Sidebar width + float */
+.year-sidebar {
+  inline-size: clamp(15.5rem, 20vw, 16.5rem);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+/* ============ Shell: soft frame, single thin inner line ============ */
+.year-shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+  border-radius: 8px; /* a touch more round to match thicker frame */
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
+  background: transparent;
+  border: none;
+  padding: 10px; /* NEW: makes the shell frame broader */
+}
+
+  .year-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: #0f4358;
+    /* Slightly stronger edge so the bigger frame reads cleanly */
+    pointer-events: none;
+  }
+
+
+/* inner padding */
+.year-shell__content {
+  position: relative;
+  z-index: 1;
+  padding: 8px;
+  border-radius: inherit;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100%;
+}
+
+/* ============ Cards: deep teal, ONE light line (no double glow) ============ */
+.year-card {
+  background-color: #082f41; /* deeper than shell */
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  /* one light line; no thick inner glow */
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14);
+  border: none;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.year-shell__content > .year-card:first-child {
+  margin-top: 4px;
+}
+
+/* ============ Typography ============ */
+/* Year large, centered; date smaller */
+.year-card .bui-text-label-bold-14 {
+  font-size: 30px; /* larger like left */
+  line-height: 34px;
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: .2px;
+}
+
+.year-card .bui-text-label-regular-12 {
+  font-size: 12.5px; /* smaller than before */
+  line-height: 16px;
+  color: rgba(255,255,255,.85);
+  text-align: center;
+}
+
+/* Active Modules: bold but not oversize */
+.year-cta {
+  min-height: 30px;
+  padding-block: 6px !important;
+}
+
+  .year-cta span {
+    color: #fff !important;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+/* “This week” stronger, but not huge */
+.year-card .bui-mb-1 {
+  margin-bottom: 8px;
+}
+
+.year-card .bui-text-label-bold-14,
+.year-card .bui-text-label-bold-14.bui-mb-1,
+.year-card .bui-text-label-bold-14 + .bui-mb-1 {
+  text-align: center;
+}
+
+.year-card.year-card--fill .bui-text-label-bold-14 {
+  font-size: 22px;
+  line-height: 26px; /* down from 24/28 */
+}
+
+/* ============ Weekly card fill + list scroll ============ */
+.year-card--fill {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.week-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  background: transparent;
+  padding-block-end: 2px;
+}
+
+/* ============ Week rows: FLAT panels (remove pill frames) ============ */
+.week-row {
+  background-color: #082f41; /* same as card bg */
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  /* remove inset border that created the pill look */
+  box-shadow: none;
+  border: none;
+}
+
+  .week-row:hover {
+    background-color: #0a364a;
+  }
+  /* subtle lift */
+
+  /* row label */
+  .week-row .bui-text-label-regular-12,
+  .week-row .bui-text-label-regular-14 {
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(255,255,255,.92);
+  }
+
+  /* checkbox spacing/size */
+  .week-checkbox,
+  .week-row bui-checkbox,
+  .week-row [bui-checkbox] {
+    inline-size: 18px;
+    block-size: 18px;
+    margin-inline-start: 10px;
+  }
+
+/* NEW: middle wrap layer between shell and dark cards */
+.year-mid {
+  position: relative;
+  z-index: 1;
+  /* same rounding and clipping as shell so layers align perfectly */
+  border-radius: inherit;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  /* your requested color */
+  background-color: #668493;
+  /* a subtle inner line so it looks inset between shell and cards */
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+}
+  .year-mid > .year-shell__content {
+    padding: 8px; /* match your current gutter */
+  }
+
+
+/* ============ Small phones full width ============ */
+@media (max-width: 420px) {
+  .year-sidebar {
+    inline-size: 100%;
+  }
+
+  .year-shell {
+    min-block-size: 100dvh;
+  }
+}
