@@ -1,0 +1,68 @@
+
+<div class="bui-shell bui-flex bui-flex-col bui-card--fill dv-shell">
+  <div class="bui-shell-mid">
+    <div class="bui-shell__content">
+      <!-- header -->
+      <div class="dv-header bui-mb-2">
+        <div class="dv-title">{{ meta?.dayLabel }}</div>
+        <div class="dv-meta-row">
+          <div class="dv-chip">{{ meta?.dateLabel }}</div>
+          <div class="dv-chip">{{ meta?.module || 'Modul' }}</div>
+          <div class="dv-meta-right">
+            <bui-icon icon="time" size="small"></bui-icon>
+            <span>Last edited at: {{ meta?.lastEdited || '-' }}</span>
+          </div>
+        </div>
+        <div class="dv-note" *ngIf="meta?.note">{{ meta?.note }}</div>
+      </div>
+
+      <!-- timeline -->
+      <div class="bui-card bui-card--fill">
+        <div class="bui-card__scroll bui-p-1.5">
+          <article *ngFor="let t of tasks"
+                   class="dv-card"
+                   [class.dv-card--done]="t.status === 'done'"
+                   [class.dv-card--pending]="t.status === 'pending'"
+                   [class.dv-card--empty]="t.status === 'empty'"
+                   [attr.data-task-id]="t.id">
+
+            <div class="dv-row">
+              <div class="time-col">
+                <div class="time-chip">{{ t.from }}{{ t.to ? ' - ' + t.to : '' }}</div>
+                <div class="time-icons">
+                  <bui-icon icon="calendar" size="small"></bui-icon>
+                  <bui-icon icon="time" size="small"></bui-icon>
+                  <bui-icon icon="document-text" size="small"></bui-icon>
+                </div>
+              </div>
+
+              <!-- content-col is the "daycontent square" – add click -->
+              <div class="content-col"
+                   [routerLink]="['/about']"
+                   role="link"
+                   tabindex="0"
+                   style="cursor: pointer;">
+                <div class="task-title" *ngIf="t.title; else blank">{{ t.title }}</div>
+                <ng-template #blank><span>&nbsp;</span></ng-template>
+                <div class="task-note" *ngIf="t.note">{{ t.note }}</div>
+              </div>
+
+
+
+              <div class="side-col">
+                <link *ngIf="t.linkText" class="side-link" {{ t.linkText }}>
+                <div class="side-picture" *ngIf="t.pictureUrl; else ph">
+                  <img [src]="t.pictureUrl" alt="picture">
+                </div>
+                <ng-template #ph>
+                  <div class="side-picture placeholder">picture</div>
+                </ng-template>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

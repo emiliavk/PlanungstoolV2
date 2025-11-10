@@ -1,0 +1,60 @@
+<div class="bui-shell bui-flex bui-flex-col bui-card--fill week-view-shell">
+  <div class="bui-shell-mid">
+    <div class="bui-shell__content">
+
+      <!-- Optional header for the week -->
+      <header class="bui-flex bui-items-center bui-gap-2 bui-mb-2">
+        <div class="bui-text-label-bold-14 bui-flex-1 bui-text-left">
+          {{ weekTitle }}
+        </div>
+        <div class="bui-text-label-regular-12">
+          {{ rangeLabel }}
+        </div>
+      </header>
+
+      <!-- Columns grid -->
+      <section class="week-grid">
+        <div *ngFor="let col of columns" class="week-col">
+
+          <!-- Column shell -->
+          <div class="bui-shell bui-flex bui-flex-col bui-card--fill week-col-shell">
+            <div class="bui-shell-mid">
+              <div class="bui-shell__content">
+
+                <!-- Day header -->
+                <div class="week-col-header">
+                  <div class="bui-text-label-bold-14 bui-mb-0.5">{{ col.dayLabel }}</div>
+                  <div class="bui-text-label-regular-12">{{ col.dateLabel }}</div>
+                </div>
+
+                <!-- Scrollable list of cards -->
+                <div class="bui-card__scroll bui-p-1.5">
+                  <article *ngFor="let item of col.items"
+                           class="task-card"
+                    [class.task-card--done]="item.status === 'done'"
+                    [class.task-card--pending]="item.status === 'pending'"
+                    [class.task-card--empty]="item.status === 'empty'"
+                       [routerLink]="['/about']">
+
+                    <div class="task-card__content">
+                      <div class="task-card__title">{{ item.title || ' ' }}</div>
+                      <div class="task-card__status">
+                        <bui-icon *ngIf="item.status === 'done'" icon="accept" size="small"></bui-icon>
+                        <bui-icon *ngIf="item.status === 'pending'" icon="hourglass" size="small"></bui-icon>
+                      </div>
+                    </div>
+
+                  </article>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- /column shell -->
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>

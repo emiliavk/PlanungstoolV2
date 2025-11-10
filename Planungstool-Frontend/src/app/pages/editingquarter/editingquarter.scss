@@ -1,0 +1,103 @@
+:host {
+  display: block;
+  min-height: 100%;
+}
+
+/* Shell and card layer copied from your StartPage style so the page matches */
+.bui-shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
+  background: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.bui-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: #0f4358;
+  pointer-events: none;
+}
+
+.bui-shell-mid {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  background-color: #668493;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.bui-shell__content {
+  position: relative;
+  z-index: 1;
+  padding: 8px;
+  border-radius: inherit;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.bui-shell-sidebar {
+  inline-size: clamp(15.5rem, 20vw, 16.5rem);
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+/* Cards */
+.bui-card {
+  background-color: #082f41;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  border: none;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.bui-card--fill {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.bui-card__scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  background: transparent;
+  padding-block-end: 2px;
+}
+
+/* small rounded helpers used in tags */
+.bui-rounded-4 {
+  border-radius: 12px;
+}
+
+.tile-btn {
+  height: 110px;
+  border-radius: 8px;
+  background: #0b3144; /* deep-blue-80 */
+  border: 1px solid #214556; /* deep-blue-60 */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.tile-btn:hover {
+  background: #0e3a51; /* deep-blue-70 */
+}
+

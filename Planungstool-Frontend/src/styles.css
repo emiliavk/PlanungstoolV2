@@ -1,47 +1,184 @@
 /* @tailwind base; is a Reset-File, don't use it in combination with a different reset-files. */
 @tailwind base;
-
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
 
+/* Fonts */
 @buhler/ui-fonts/css/buhler-fonts.css;
-/* global styles */
-/* back frame – THIN and subtle */
-.bui-back-card {
-  background-color: #335B6F;                 
-  border: 1px solid rgba(255,255,255,0.10);  
-  border-radius: 8px;
 
-  padding: 2px;                              
-  margin: 8px;                               
-
-  /* no extra lines */
-  box-shadow: none;
-
-  /* layout safety */
-  position: relative;
-  z-index: 1;
-}
-
-
-/* Make page bg slightly darker so the #335B6F frame stands out */
+/* ------------------------------
+  Shell Layer (Global)
+------------------------------ */
 body {
   background-color: #00324B;
 }
-/* you already have this */
 
-
-/* right side placeholder */
-.page-grid {
-  display: grid;
-  grid-template-columns: 253px; 
-  gap: 16px; 
-  padding: 12px; 
-  height: 100%;
+/* Shell container (outer frame) */
+.bui-shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
+  background: transparent;
+  border: none;
+  padding: 10px; /* outer frame thickness */
 }
 
-/* if any parent has overflow hidden, disable for the sidebar column */
-.sidebar-column, .page-grid, .app-shell-left {
+  .bui-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: #0f4358; /* shell edge color */
+    pointer-events: none;
+  }
+
+/* Mid layer inside the shell */
+.bui-shell-mid {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  background-color: #668493;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+/* Shell inner content wrapper (gutter, clipping) */
+.bui-shell__content {
+  position: relative;
+  z-index: 1;
+  padding: 8px;
+  border-radius: inherit;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar sizing (optional utility) */
+.bui-shell-sidebar {
+  inline-size: clamp(15.5rem, 20vw, 16.5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------
+  Card Layer (Global)
+------------------------------ */
+
+.bui-card {
+  background-color: #082f41; /* deep teal card default */
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  border: none;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.bui-shell__content > .bui-card:first-child {
+  margin-top: 4px;
+}
+
+/* Fill/stacking card that grows */
+.bui-card--fill {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Scrollable inner region for lists */
+.bui-card__scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  background: transparent;
+  padding-block-end: 2px;
+}
+
+/* ------------------------------
+  Flat Row (no pill look)
+------------------------------ */
+
+.bui-row-flat {
+  background-color: #082f41;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  box-shadow: none;
+  border: none;
+}
+
+  .bui-row-flat:hover {
+    background-color: #0a364a;
+  }
+
+/* ------------------------------
+  Typography (Scoped for cards)
+------------------------------ */
+
+.bui-card .bui-text-label-bold-14 {
+  font-size: 30px;
+  line-height: 34px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.bui-card .bui-text-label-regular-12 {
+  font-size: 12.5px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+/* Variant for compact titles in filling cards */
+.bui-card--fill .bui-text-label-bold-14 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+/* CTA strip inside card */
+.bui-card .bui-cta {
+  min-height: 30px;
+  padding-block: 6px !important;
+}
+
+  .bui-card .bui-cta span {
+    color: #fff !important;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+/* ------------------------------
+  Utilities
+------------------------------ */
+
+/* If any parent has overflow hidden, allow sidebar column to overflow */
+.sidebar-column,
+.page-grid,
+.app-shell-left {
   overflow: visible;
+}
+
+/* ------------------------------
+  Responsive
+------------------------------ */
+
+@media (max-width: 420px) {
+  .bui-shell-sidebar {
+    inline-size: 100%;
+  }
+
+  .bui-shell {
+  }
 }

@@ -1,0 +1,20 @@
+<div class="bui-shell bui-flex bui-flex-col bui-card--fill dc-shell">
+  <div class="bui-shell-mid">
+    <div class="bui-shell__content">
+      <div class="bui-card bui-card--fill">
+        <div class="bui-shell__content bui-p-2">
+          <div class="dc-title">Checklist</div>
+
+          <div class="bui-card__scroll bui-pr-1">
+            <label *ngFor="let item of items" class="dc-row">
+              <span class="dc-label">{{ item.label }}</span>
+              <input type="checkbox"
+                     [checked]="item.checked"
+                     (change)="onToggle(item)" />
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

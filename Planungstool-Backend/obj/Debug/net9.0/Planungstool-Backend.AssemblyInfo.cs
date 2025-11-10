@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Planungstool-Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93f71d1b29dadc55b1e5dfd633f30c8c244e6a5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3016b5702a7e91794378456b8d56969b1f471f22")]
 [assembly: System.Reflection.AssemblyProductAttribute("Planungstool-Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Planungstool-Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

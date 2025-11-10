@@ -1,19 +1,36 @@
 <bui-app-shell class="bui-bg-light-white dark:bui-bg-deep-blue-95">
   <bui-header size="default" class="bui-bg-light-white dark:bui-bg-deep-blue-90">
-    <bui-header-brand-logo><bui-logo size="small"></bui-logo></bui-header-brand-logo>
+    <bui-header-brand-logo>
+      <bui-logo size="small"
+                style="cursor: pointer;"
+                [routerLink]="['/start']">
+      </bui-logo>
+    </bui-header-brand-logo>
+
     <bui-header-title class="dark:bui-text-white">{{ username }}</bui-header-title>
+
     <bui-header-center>
       <div class="bui-flex bui-items-center bui-gap-2">
         <bui-search placeholder="Search..." class="dark:bui-text-white"></bui-search>
-        <button bui-secondary-button (click)="onToggleEditMode()"><span>Edit Mode</span></button>
+        <button bui-secondary-button
+                style="cursor: pointer;"
+                [routerLink]="['/editmode']">
+          <span>Edit Mode</span>
+        </button>
       </div>
     </bui-header-center>
+
     <bui-header-menu>
       <button bui-icon-button icon="more-vertical"></button>
     </bui-header-menu>
   </bui-header>
 
   <div buiAppShellContent class="bui-h-full bui-bg-light-white dark:bui-bg-deep-blue-95">
-    <router-outlet></router-outlet>
+    <div class="bui-flex bui-gap-3 bui-h-full bui-p-2">
+      <app-year-view class="sidebar-column"></app-year-view>
+      <app-week-view class="bui-flex-1"></app-week-view>
+    </div>
+
+
   </div>
 </bui-app-shell>

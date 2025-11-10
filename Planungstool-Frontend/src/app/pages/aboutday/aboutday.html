@@ -1,0 +1,133 @@
+<bui-app-shell class="bui-bg-light-white dark:bui-bg-deep-blue-95 aboutday-appshell">
+  <!-- Header -->
+  <bui-header size="default" class="bui-bg-light-white dark:bui-bg-deep-blue-90">
+    <bui-header-brand-logo>
+      <bui-logo
+                size="small"
+                style="cursor: pointer;"
+                [routerLink]="['/start']">
+      </bui-logo>
+    </bui-header-brand-logo>
+
+
+    <bui-header-center>
+      <div class="bui-flex bui-items-center bui-gap-2">
+        <bui-search placeholder="Search..." class="dark:bui-text-white"></bui-search>
+        <button bui-secondary-button
+                style="cursor: pointer;"
+                [routerLink]="['/editmode']">
+          <span>Edit Mode</span>
+        </button>
+      </div>
+    </bui-header-center>
+
+    <bui-header-menu>
+      <button bui-icon-button icon="more-vertical"></button>
+    </bui-header-menu>
+  </bui-header>
+
+  <!-- Page Content -->
+  <div buiAppShellContent class="bui-h-full bui-bg-light-white dark:bui-bg-deep-blue-95">
+    <div class="bui-flex bui-h-full bui-p-2">
+      <div class="bui-shell bui-flex bui-flex-col bui-card--fill aboutday-shell">
+        <div class="bui-shell-mid">
+          <div class="bui-shell__content">
+            <div class="bui-card bui-card--fill">
+              <div class="bui-shell__content">
+
+                <!-- Shared frame: Checklist (left) + Right sheet (meta + dayview) -->
+                <section class="aboutday-grid">
+                  <!-- LEFT RAIL / CHECKLIST -->
+                  <aside class="rail">
+                    <div class="rail-inner">
+                      <header class="rail-title">Checklist</header>
+
+                      <div *ngFor="let item of checklist; index as i"
+                           class="bui-row-flat bui-flex bui-items-center bui-justify-between">
+                        <span class="bui-text-label-regular-12">{{ item.label }}</span>
+
+                        <!-- BÜHLER Checkbox: checked gebunden + Toggle -->
+                        <bui-checkbox [checked]="item.checked"
+                                      (checkedChange)="onChecklistToggle(i, $event)">
+                        </bui-checkbox>
+                      </div>
+                    </div>
+                  </aside>
+
+
+
+                  <!-- RIGHT: META + TIMELINE -->
+                  <div class="dayview">
+                    <!-- Meta row -->
+                    <div class="hdr-grid">
+                      <div class="hdr-label">Planung vom</div>
+                      <div class="hdr-chip">{{ meta?.dateLabel }}</div>
+                      <div class="hdr-chip">{{ meta?.module || 'Modul' }}</div>
+                      <div class="hdr-last">
+                        <bui-icon icon="time" size="small"></bui-icon>
+                        <span>Last edited at: {{ meta?.lastEdited || '-' }}</span>
+                      </div>
+                      <div class="hdr-note">{{ meta?.note }}</div>
+                    </div>
+
+                    <!-- Timeline list -->
+                    <div class="bui-flex bui-flex-col bui-gap-3">
+                      <div class="slot" *ngFor="let t of tasks; trackBy: trackByTask">
+
+                        <!-- left: time + segmented -->
+                        <div class="slot-left">
+                          <div class="time-pill">{{ t.from }}{{ t.to ? ' - ' + t.to : '' }}</div>
+
+                          <!-- Standard BUI segmented button (unchanged) -->
+                          <div class="bui-flex bui-gap-1">
+                            <div class="bui-touch">
+                              <bui-segmented-button class="seg-mini"
+                                                    [selectedItem]="getSegSelected(t.id)"
+                                                    (selectedItemChange)="setSegSelected(t.id, $event)">
+                                <button bui-segmented-button-item [id]="'calendar'">
+                                  <bui-icon icon="calendar"></bui-icon>
+                                </button>
+                                <button bui-segmented-button-item [id]="'time'">
+                                  <bui-icon icon="time"></bui-icon>
+                                </button>
+                                <button bui-segmented-button-item [id]="'doc'">
+                                  <bui-icon icon="document-text"></bui-icon>
+                                </button>
+                              </bui-segmented-button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- center: dark card -->
+                        <div class="slot-content"
+                             role="button"
+                             tabindex="0"
+                             (click)="onContentClick($event)"
+                             style="cursor: pointer;"
+                             [class.slot-content--done]="t.status === 'done'"
+                             [class.slot-content--pending]="t.status === 'pending'">
+                          <div class="slot-title" *ngIf="t.title; else blank">{{ t.title }}</div>
+                          <ng-template #blank><span>&nbsp;</span></ng-template>
+                          <div class="slot-note" *ngIf="t.note">{{ t.note }}</div>
+                        </div>
+
+
+                        <!-- right: link + picture -->
+                        <div class="slot-right">
+                          <a class="link" *ngIf="t.linkText">{{ t.linkText }}</a>
+                          <div class="picture">picture</div>
+                        </div>
+
+                      </div> <!-- /slot -->
+                    </div>
+                  </div> <!-- /dayview -->
+                </section> <!-- /aboutday-grid -->
+
+              </div> <!-- /.bui-shell__content -->
+            </div> <!-- /.bui-card -->
+          </div> <!-- /.bui-shell__content -->
+        </div> <!-- /.bui-shell-mid -->
+      </div> <!-- /.aboutday-shell -->
+    </div> <!-- /.bui-flex -->
+  </div> <!-- /buiAppShellContent -->
+</bui-app-shell>

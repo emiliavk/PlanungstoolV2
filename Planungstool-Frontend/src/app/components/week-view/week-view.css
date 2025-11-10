@@ -1,0 +1,114 @@
+/* Week View – specialized styles layered over your global shell */
+.week-view-shell {
+  min-height: 0; /* allow inner grid to manage scrolling */
+}
+
+/* Grid of day columns */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  gap: 14px;
+  min-height: 0;
+}
+
+@media (max-width: 1200px) {
+  .week-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .week-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Column shell spacing */
+.week-col-shell .bui-shell__content {
+  padding: 10px;
+}
+
+/* Keep internal scrollers working inside nested shells */
+.week-col-shell .bui-card__scroll {
+  overflow: auto;
+  max-height: unset;
+  min-height: 0;
+}
+
+/* Even gutters across columns */
+.week-col .bui-shell {
+  padding: 6px;
+}
+
+/* Make the component and top shell consume the full column height */
+:host {
+  height: 100%;
+  min-height: 0;
+}
+
+.week-view-shell {
+  min-height: 0;
+}
+
+  .week-view-shell .bui-shell {
+    padding-top: 6px; /* keep small, consistent gutter */
+    margin-top: 0;
+  }
+
+.week-col-header {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Light rounded cards (clickable) */
+.task-card {
+  background-color: #e6f0f4;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  color: #0f4358;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  cursor: pointer; /* show pointer */
+}
+
+  .task-card.task-card--empty {
+    opacity: 0.95;
+  }
+
+  .task-card:hover {
+    background-color: #eef5f8;
+    transform: translateY(-1px);
+  }
+
+.task-card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-card__title {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.task-card__status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.task-card--done {
+  box-shadow: inset 0 0 0 1px rgba(8, 47, 65, 0.12);
+}
+
+.task-card--pending {
+  box-shadow: inset 0 0 0 1px rgba(8, 47, 65, 0.18);
+}

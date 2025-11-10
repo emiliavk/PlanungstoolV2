@@ -12,13 +12,13 @@
   display: flex;
   flex-direction: column;
   min-block-size: 100vh;
-  border-radius: 8px; /* a touch more round to match thicker frame */
+  border-radius: 8px; 
   overflow: hidden;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
   background: transparent;
   border: none;
-  padding: 10px; /* NEW: makes the shell frame broader */
+  padding: 10px; 
 }
 
   .year-shell::before {
@@ -27,7 +27,6 @@
     inset: 0;
     border-radius: inherit;
     background-color: #0f4358;
-    /* Slightly stronger edge so the bigger frame reads cleanly */
     pointer-events: none;
   }
 

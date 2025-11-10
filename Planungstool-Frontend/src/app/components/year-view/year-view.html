@@ -1,42 +1,39 @@
-<div class="year-sidebar bui-flex bui-flex-col">
-  <div class="year-shell">
-    <!-- NEW: middle wrap between the shell and the content -->
-    <div class="year-mid">
-      <!-- content wrapper inside mid so clipping respects rounding -->
-      <div class="year-shell__content">
+<div class="bui-shell-sidebar bui-flex bui-flex-col">
+  <div class="bui-shell">
+    <div class="bui-shell-mid">
+      <div class="bui-shell__content">
 
         <!-- Card: Year -->
-        <div class="year-card">
+        <section class="bui-card">
           <div class="bui-text-label-bold-14">
             {{ year }}
           </div>
           <div class="bui-text-label-regular-12">
             {{ dayLabel }} {{ monthLabel }}
           </div>
-        </div>
+        </section>
 
         <!-- Card: Active Modules -->
-        <div class="year-card">
-          <button bui-secondary-button class="bui-w-full bui-justify-center year-cta">
+        <section class="bui-card">
+          <button bui-secondary-button class="bui-w-full bui-justify-center bui-cta">
             <span class="bui-text-label-regular-12">
               Active Modules<span *ngIf="activeModulesCount"> ({{ activeModulesCount }})</span>
             </span>
           </button>
-        </div>
+        </section>
 
-        <!-- Card: Weekly checklist (fills the remaining height) -->
-        <div class="year-card year-card--fill">
+        <!-- Card: Weekly checklist (fills remaining height) -->
+        <section class="bui-card bui-card--fill">
           <div class="bui-text-label-bold-14 bui-mb-1">This week</div>
 
-          <!-- Only the list scrolls if content is taller than the available space -->
-          <div class="week-list">
+          <div class="bui-card__scroll">
             <div *ngFor="let item of weekItems; index as i"
-                 class="week-row bui-flex bui-items-center bui-justify-between">
+                 class="bui-row-flat bui-flex bui-items-center bui-justify-between">
               <span class="bui-text-label-regular-12">{{ item.label }}</span>
               <bui-checkbox (checkedChange)="toggle(i)"></bui-checkbox>
             </div>
           </div>
-        </div>
+        </section>
 
       </div>
     </div>
