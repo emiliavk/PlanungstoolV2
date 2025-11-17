@@ -1,25 +1,28 @@
 :host {
   display: block;
   height: 100%;
-  /* Remove the darkest shell */
-  /* background-color: #082734; */
-  /* padding: 6px; */
 }
 
-/* Inner shell remains */
+/* inner panel shell */
 nav {
-  background-color: #5f7f8b; /* mid blue-gray */
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
-  border-radius: 10px;
+  background-color: #6b8792;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 3px rgba(255,255,255,0.08), inset 0 0 0 1px rgba(255,255,255,0.18);
+  padding: 10px;
 }
 
-/* Column containing the stack */
+/* skinny column */
 .stack {
-  width: 144px;
-  margin: 0 8px;
+  width: 156px;
+  max-width: 156px;
+  margin: 0 6px;
 }
 
-/* Year pill row */
+.stack > * + * {
+  margin-top: 10px;
+}
+
+/* year pill */
 .year-row {
   display: flex;
   align-items: center;
@@ -27,81 +30,118 @@ nav {
   background-color: #053145;
   border: 1px solid #1e4253;
   border-radius: 4px;
-  padding: 6px 8px;
+  height: 36px;
+  padding: 0 10px;
 }
 
 .year-button {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  color: #ffffff;
+  gap: 8px;
+  color: #fff;
   background: transparent;
-  padding: 0;
-  min-height: 24px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 36px;
+  min-height: 36px;
+  max-width: calc(100% - 28px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.year-button bui-icon {
+  color: inherit;
+  font-size: 16px;
 }
 
 [bui-icon-button][icon="more-vertical"] {
-  color: #ffffff;
+  color: #fff;
+  margin-left: 6px;
 }
 
-/* Expanded entries */
+/* entries */
 .entries {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: 6px;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .entry-button {
   width: 100%;
   justify-content: flex-start;
-  color: #ffffff;
-  background-color: #08364c;
+  color: #fff;
+  background-color: #0a3a4f;
   border: 1px solid #1e4253;
   border-radius: 4px;
-  padding-inline: 10px;
-  min-height: 28px;
-  font-weight: 500;
+  min-height: 32px;
+  padding: 0 10px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
-.entry-button:hover {
-  background-color: #0c3d55;
+.entry-button + .entry-button {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
 }
 
-/* Tags */
+.entry-button:hover {
+  background-color: #0c4158;
+}
+
+/* footer mini chips */
 .tags {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   margin-top: auto;
-  padding: 8px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.tag-pill {
+.tag-btn {
   background-color: #e5eef2;
   color: #3b5563;
+  border: none;
   border-radius: 12px;
-  padding: 4px 10px;
-  font-size: 12.5px;
-  line-height: 16px;
-  white-space: nowrap;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.04) inset;
+  font-weight: 600;
+  transition: background-color .15s ease-in-out, color .15s ease-in-out;
 }
 
-/* Menu panel: avoid inner scrollbars */
+.tag-btn--mini {
+  padding: 2px 8px;
+  min-height: 22px;
+  line-height: 14px;
+  font-size: 12px;
+}
+
+.tag-btn:hover {
+  background-color: #dbe7ec;
+}
+
+.tag-btn:focus-visible {
+  outline: 2px solid #87c8f0;
+  outline-offset: 2px;
+}
+
+/* compact tertiary buttons */
+[bui-tertiary-button] {
+  min-height: 24px;
+}
+
+/* menu panel: avoid inner scrollbars */
 :host ::ng-deep .bui-menu-panel {
   max-height: none;
   overflow: visible;
 }
 
-/* Compact tertiary buttons */
-[bui-tertiary-button] {
-  min-height: 28px;
+.cdk-overlay-container {
+  z-index: 10000;
 }
 
-/* Arrow icon inherits text color */
-.year-button bui-icon {
-  color: inherit;
-}

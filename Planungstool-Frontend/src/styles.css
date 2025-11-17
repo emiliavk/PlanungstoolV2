@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden; /* keep for masked rounded frame */
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
   background: transparent;
@@ -42,10 +42,12 @@ body {
   position: relative;
   z-index: 1;
   border-radius: inherit;
-  overflow: hidden;
+  overflow: hidden; /* keep for masked rounded frame */
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   background-color: #668493;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  /* allow the chain to shrink */
+  min-height: 0;
 }
 
 /* Shell inner content wrapper (gutter, clipping) */
@@ -54,10 +56,12 @@ body {
   z-index: 1;
   padding: 8px;
   border-radius: inherit;
-  overflow: hidden;
+  overflow: hidden; /* keep for masked rounded frame */
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   display: flex;
   flex-direction: column;
+  /* allow the chain to shrink */
+  min-height: 0;
 }
 
 /* Sidebar sizing (optional utility) */
@@ -78,7 +82,7 @@ body {
   padding: 10px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
   border: none;
-  overflow: hidden;
+  overflow: hidden; /* keep for masked rounded frame */
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
@@ -91,14 +95,14 @@ body {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  min-height: 0;
+  min-height: 0; /* critical for flex-shrink chain */
 }
 
 /* Scrollable inner region for lists */
 .bui-card__scroll {
   flex: 1 1 auto;
   min-height: 0;
-  overflow: auto;
+  overflow: auto; /* this is the scroller */
   background: transparent;
   padding-block-end: 2px;
 }
@@ -170,9 +174,11 @@ body {
   overflow: visible;
 }
 
-/* ------------------------------
+/*
+------------------------------
   Responsive
------------------------------- */
+------------------------------
+*/
 
 @media (max-width: 420px) {
   .bui-shell-sidebar {
@@ -180,5 +186,291 @@ body {
   }
 
   .bui-shell {
+    /* add small tweaks if needed */
+  }
+}
+
+/* Allow the app-shell content area to scroll instead of clipping */
+[buiAppShellContent] {
+  min-height: 0; /* allow children to shrink */
+  overflow: auto; /* enable scrolling when content exceeds viewport */
+}
+
+/* Ensure the immediate flex parent of the shell can shrink (prevents clipping) */
+.bui-flex.bui-h-full {
+  min-height: 0;
+}
+
+/* ------------------------------
+  Page-specific (About Day)
+------------------------------ */
+
+/* tighten shell spacing (remove big gap under header) */
+.aboutday-appshell .bui-h-full {
+  min-height: 0;
+}
+
+.aboutday-shell .bui-shell__content {
+  min-height: 0;
+  padding-block: 8px;
+  padding-inline: 10px;
+}
+
+/* Meta row (Planung vom | Date | Modul | Last edited + Note) */
+.hdr-grid {
+  display: grid;
+  grid-template-columns: auto 220px 220px 1fr; /* Label | Date | Module | Right fill */
+  gap: 10px 14px;
+  align-items: center;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.hdr-label {
+  color: #e4eef3;
+  font-weight: 600;
+}
+
+.hdr-chip {
+  background: #274b5a;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.12);
+}
+
+.hdr-last {
+  justify-self: end;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: rgba(255,255,255,.9);
+}
+
+.hdr-note {
+  grid-column: 1 / -1;
+  background: #0f3b4e;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+/* Two-column body (rail + dayview) */
+.aboutday-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* left rail width like Figma */
+  gap: 16px;
+  min-height: 0; /* allow shrink in flex context */
+}
+
+/* Left rail */
+.rail {
+  background: #073141; /* outer border backdrop */
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.08);
+}
+
+.rail-inner {
+  background: #062838; /* darker inner panel */
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 520px; /* gives presence */
+}
+
+.rail-title {
+  color: #e5f0f6;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.rail-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 6px;
+  color: #cfe3eb;
+}
+
+.rail-label {
+  font-size: 14px;
+}
+
+.rail-check {
+  inline-size: 18px;
+  block-size: 18px;
+}
+
+/* Right content sheet (DayView) */
+.dayview {
+  background: #5d7988; /* grey-blue sheet */
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.08);
+  margin-top: 0;
+}
+
+/* Timeline rows */
+.slot {
+  display: grid;
+  grid-template-columns: 180px 1fr 140px; /* left / center / right */
+  gap: 14px;
+  align-items: start;
+}
+
+  .slot + .slot {
+    margin-top: 12px;
+  }
+
+.slot-left {
+  display: grid;
+  gap: 10px;
+}
+
+/* Time pill (darker teal like the screenshot) */
+.time-pill {
+  background: #244A59; /* darker teal */
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 8px 10px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+/* Pure CSS segmented control (unused now, safe to keep/remove) */
+.mini-seg-alt {
+  --seg-bg: #2f5565;
+  --seg-border: rgba(255,255,255,.14);
+  --seg-hover: #3e6a7b;
+  --seg-active: #244a59;
+  display: inline-flex;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: var(--seg-bg);
+  box-shadow: inset 0 0 0 1px var(--seg-border);
+  align-items: center;
+}
+
+  .mini-seg-alt > button {
+    display: inline-grid;
+    place-items: center;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: transparent;
+    color: #e9f3f8;
+    cursor: pointer;
+    min-width: 0;
+    line-height: 0;
+    border: none;
+  }
+
+    .mini-seg-alt > button:hover {
+      background: var(--seg-hover);
+    }
+
+    .mini-seg-alt > button:active {
+      background: var(--seg-active);
+    }
+
+/* Cards */
+.slot-content {
+  background: #032a3b;
+  border-radius: 10px;
+  min-height: 84px;
+  padding: 10px 12px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+  cursor: pointer;
+  transition: background-color .15s ease, transform .15s ease;
+  position: relative;
+  z-index: 1;
+}
+
+  .slot-content:hover {
+    background: #083346;
+    transform: translateY(-1px);
+  }
+
+.slot-content--done {
+  box-shadow: inset 0 0 0 1px rgba(118,214,168,.18);
+}
+
+.slot-content--pending {
+  box-shadow: inset 0 0 0 1px rgba(255,210,95,.24);
+}
+
+.slot-title {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.slot-note {
+  color: rgba(255,255,255,.92);
+  font-size: 13px;
+}
+
+/* Right side (link + picture) */
+.slot-right {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.link {
+  color: rgba(255,255,255,.88);
+  text-decoration: none;
+}
+
+.picture {
+  inline-size: 112px;
+  block-size: 112px;
+  background: #e5e5e5;
+  border-radius: 6px;
+  color: #333;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
+}
+
+
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .aboutday-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rail {
+    order: 1;
+  }
+
+  .dayview {
+    order: 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .slot {
+    grid-template-columns: 1fr;
+  }
+
+  .slot-right {
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  /* Optional: let rail content shrink at small screens */
+  .rail-inner {
+    min-height: 0;
   }
 }

@@ -10,7 +10,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [CommonModule, BuiIconComponent, RouterLink, RouterOutlet], 
   templateUrl: './day-view.html',
-  styleUrls: ['./day-view.css']
+  styleUrls: ['./day-view.scss']
 })
 export class DayViewComponent {
   @Input() meta!: DayMeta;

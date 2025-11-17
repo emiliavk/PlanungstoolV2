@@ -1,5 +1,4 @@
 <bui-app-shell class="bui-bg-light-white dark:bui-bg-deep-blue-95 aboutday-appshell">
-  <!-- Header -->
   <bui-header size="default" class="bui-bg-light-white dark:bui-bg-deep-blue-90">
     <bui-header-brand-logo>
       <bui-logo size="small" style="cursor: pointer;" [routerLink]="['/start']"></bui-logo>
@@ -8,7 +7,8 @@
     <bui-header-center>
       <div class="bui-flex bui-items-center bui-gap-2">
         <bui-search placeholder="Search..." class="dark:bui-text-white"></bui-search>
-        <button bui-secondary-button
+        <button
+                bui-secondary-button
                 style="cursor: pointer;"
                 [routerLink]="['/start']">
           <span>Overview</span>
@@ -21,18 +21,14 @@
     </bui-header-menu>
   </bui-header>
 
-  <!-- Content area -->
   <div buiAppShellContent class="bui-h-full bui-bg-light-white dark:bui-bg-deep-blue-95 bui-p-2">
     <div class="bui-flex bui-gap-3 bui-h-full">
-
-      <!-- LEFT SHELL: render standalone component -->
       <div class="bui-shell">
-          <div class="bui-shell__content bui-h-full">
-            <edit-decision class="bui-block bui-h-full"></edit-decision>
-          </div>
+        <div class="bui-shell__content bui-h-full">
+          <edit-decision class="bui-block bui-h-full"></edit-decision>
+        </div>
       </div>
 
-      <!-- RIGHT SHELL: module grid -->
       <div class="bui-shell bui-flex-1">
         <div class="bui-shell-mid">
           <div class="bui-shell__content bui-h-full">
@@ -49,7 +45,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </bui-app-shell>

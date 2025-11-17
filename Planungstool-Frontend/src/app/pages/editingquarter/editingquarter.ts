@@ -1,7 +1,7 @@
 import { Component, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router'
+import { RouterLink } from '@angular/router';
 
 import {
   BuiAppShellModule,
@@ -16,10 +16,7 @@ import {
 
 import { EditDecisionComponent } from '../../components/edit-decision/edit-decision';
 
-interface ModuleTile {
-  id: string;
-  title: string;
-}
+interface ModuleTile { id: string; title: string; }
 
 @Component({
   selector: 'app-editing-quarter',
@@ -30,7 +27,6 @@ interface ModuleTile {
     CommonModule,
     FormsModule,
     RouterLink,
-
     BuiAppShellModule,
     BuiHeaderModule,
     BuiLogoModule,
@@ -39,7 +35,6 @@ interface ModuleTile {
     BuiButtonModule,
     BuiIconButtonComponent,
     UiCoreModule,
-
     EditDecisionComponent
   ]
 })

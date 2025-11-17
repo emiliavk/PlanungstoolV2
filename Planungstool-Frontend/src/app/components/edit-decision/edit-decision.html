@@ -1,6 +1,7 @@
 <nav class="bui-flex bui-flex-col bui-h-full bui-p-2 bui-rounded-3">
   <div class="bui-flex bui-flex-col bui-gap-2 bui-overflow-auto bui-min-h-0">
     <div class="stack">
+      <!-- Render from signal -->
       <ng-container *ngFor="let y of years(); let i = index">
         <div class="year-row">
           <button bui-tertiary-button class="year-button" type="button" (click)="toggleYear(i)">
@@ -11,38 +12,44 @@
                   icon="more-vertical"
                   aria-label="Year actions"
                   [buiMenuTriggerFor]="yearMenu"
-                  [buiMenuTriggerData]="{ index: i, year: y }"
                   (click)="setMenuContext(i, y)">
           </button>
         </div>
 
         <div *ngIf="y.expanded" class="entries">
           <button bui-tertiary-button class="entry-button" type="button" (click)="editYear(y.year)">
-            <span>Edit year</span>
+            <span class="bui-truncate">Edit year</span>
           </button>
 
           <ng-container *ngFor="let q of y.quarters">
             <button bui-tertiary-button class="entry-button" type="button" (click)="editQuarter(y.year, q)">
-              <span>Edit {{ q.title }}</span>
+              <span class="bui-truncate">Edit {{ q.title }}</span>
             </button>
           </ng-container>
+
+          
         </div>
       </ng-container>
     </div>
   </div>
 
+  <!-- Footer tags -->
   <div class="tags">
-    <ng-container *ngFor="let t of tags()">
-      <span class="tag-pill">{{ t }}</span>
-    </ng-container>
+    <button bui-tertiary-button class="tag-btn tag-btn--mini" type="button" (click)="onYear()">Year</button>
+    <button bui-tertiary-button class="tag-btn tag-btn--mini" type="button" (click)="onQuarter()">Quarter</button>
+    <button bui-tertiary-button class="tag-btn tag-btn--mini" type="button" (click)="onModule()">Module</button>
+    <button bui-tertiary-button class="tag-btn tag-btn--mini" type="button" (click)="onTemplate()">Template</button>
   </div>
 </nav>
-
 <bui-menu #yearMenu [hasBackdrop]="true">
-  <ng-template buiMenuContent let-index="index" let-year="year">
+  <ng-template buiMenuContent>
     <button bui-menu-button type="button" (click)="onDeleteYear()">
       <bui-icon icon="delete"></bui-icon>
       <span>Delete year</span>
+    </button>
+    <button bui-menu-button type="button" (click)="onDuplicateYear()">
+      <bui-icon icon="copy"></bui-icon>
+      <span>Duplicate year</span>
     </button>
   </ng-template>
 </bui-menu>
